@@ -1,0 +1,9 @@
+presubmits:
+- name: presubmit-hello
+  always_run: true
+  decorate: true
+  spec:
+    containers:
+      - image: alpine
+        command: ["echo"]
+        args: ["Hello from inrepoconfig presubmit job!"]

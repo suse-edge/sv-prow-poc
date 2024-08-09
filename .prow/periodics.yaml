@@ -1,0 +1,8 @@
+periodics:
+- cron: "05 15 * * 1-5"
+  agent: kubernetes
+  name: inrepo-periodic
+  spec:
+    containers:
+    - image: alpine
+      command: ["/bin/date"]

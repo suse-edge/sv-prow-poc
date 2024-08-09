@@ -1,7 +1,17 @@
 postsubmits:
-- name: inrepo-test-postsubmit
+- name: inrepo-mandatory-test-postsubmit
   always_run: true
   decorate: true
+  skip_report: false
+  spec:
+    containers:
+      - image: alpine
+        command: ["echo"]
+        args: ["Hello from inrepoconfig presubmit job!"]
+- name: inrepo-optional-test-postsubmit
+  always_run: false
+  decorate: true
+  skip_report: false
   spec:
     containers:
       - image: alpine

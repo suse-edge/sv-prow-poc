@@ -1,9 +1,17 @@
 presubmits:
-- name: inrepo-test-presubmit
+- name: inrepo-mandatory-test-presubmit
   always_run: true
   decorate: true
   spec:
     containers:
       - image: alpine
         command: ["echo"]
-        args: ["Hello from inrepoconfig presubmit job!"]
+        args: ["Hello from inrepoconfig mandatory presubmit job!"]
+- name: inrepo-optional-test-presubmit
+  always_run: false
+  decorate: true
+  spec:
+    containers:
+      - image: alpine
+        command: ["echo"]
+        args: ["Hello from inrepoconfig optional presubmit job!"]

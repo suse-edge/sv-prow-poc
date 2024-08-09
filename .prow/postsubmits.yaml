@@ -1,5 +1,5 @@
 postsubmits:
-- name: postsubmit-hello
+- name: inrepo-test-postsubmit
   always_run: true
   decorate: true
   spec:

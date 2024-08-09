@@ -1,5 +1,5 @@
 postsubmits:
-- name: inrepo-mandatory-test-postsubmit
+- name: inrepo-automatic-test-postsubmit
   always_run: true
   decorate: true
   skip_report: false
@@ -8,7 +8,7 @@ postsubmits:
       - image: alpine
         command: ["echo"]
         args: ["Hello from inrepoconfig presubmit job!"]
-- name: inrepo-optional-test-postsubmit
+- name: inrepo-manual-test-postsubmit
   always_run: false
   decorate: true
   skip_report: false
@@ -17,3 +17,5 @@ postsubmits:
       - image: alpine
         command: ["echo"]
         args: ["Hello from inrepoconfig presubmit job!"]
+  trigger: "test postsubmit"
+  rerun_command: "test postsubmit"

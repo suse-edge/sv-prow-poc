@@ -1,5 +1,5 @@
 presubmits:
-- name: inrepo-mandatory-test-presubmit
+- name: inrepo-blocking-test-presubmit
   always_run: true
   decorate: true
   spec:

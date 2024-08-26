@@ -6,4 +6,4 @@ postsubmits:
     containers:
       - image: alpine
         command: ["echo"]
-        args: ["Hello from inrepoconfig presubmit job!"]
+        args: ["Hello from inrepoconfig postsubmit job!"]

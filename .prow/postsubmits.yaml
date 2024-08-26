@@ -1,9 +1,21 @@
 postsubmits:
-- name: inrepo-test-postsubmit
+- name: inrepo-automatic-test-postsubmit
   always_run: true
   decorate: true
+  skip_report: false
   spec:
     containers:
       - image: alpine
         command: ["echo"]
         args: ["Hello from inrepoconfig postsubmit job!"]
+- name: inrepo-manual-test-postsubmit
+  always_run: false
+  decorate: true
+  skip_report: false
+  spec:
+    containers:
+      - image: alpine
+        command: ["echo"]
+        args: ["Hello from inrepoconfig postsubmit job!"]
+  trigger: "test postsubmit"
+  rerun_command: "test postsubmit"

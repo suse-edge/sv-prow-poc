@@ -6,7 +6,7 @@ presubmits:
     containers:
       - image: alpine
         command: ["echo"]
-        args: ["Hello from inrepoconfig mandatory presubmit job!"]
+        args: ["Hello from inrepoconfig blocking presubmit job!"]
 - name: inrepo-optional-test-presubmit
   always_run: false
   decorate: true
